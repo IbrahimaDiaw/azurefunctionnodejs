@@ -18,7 +18,7 @@ app.http('Bot-pdf-function-app', {
             context.res = {  
                 headers: {  
                     'Content-Type': 'application/pdf',  
-                    'Content-Disposition': 'attachment; filename=rapport.pdf'  
+                    'Content-Disposition': 'attachment; filename=PLANHEAL_GENERAL_HEALTH_ASSESSMENT.pdf'  
                 },  
                 body: pdfData,  
                 isRaw: true,  
@@ -27,7 +27,7 @@ app.http('Bot-pdf-function-app', {
     
 
         // Genarate pdf here  
-        doc.fontSize(12).text('Rapport PDF', { underline: true });    
+        doc.fontSize(12).text('PLANHEAL GENERAL HEALTH ASSESSMENT', { underline: true });    
         result.recordset.forEach(record => {    
             doc.text(`${record.Name} - ${record.Race}`, { paragraphGap: 5 });    
         });  
